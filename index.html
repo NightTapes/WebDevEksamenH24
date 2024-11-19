@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="Icons/fontawesome/css/fontawesome.css" rel="stylesheet">
+    <link href="Icons/fontawesome/css/brands.css" rel="stylesheet">
+    <link href="Icons/fontawesome/css/solid.css" rel="stylesheet">
     <link rel="stylesheet" href="CSS/style.css">
     <title>Front Page</title>
 </head>
@@ -16,13 +19,167 @@
             </form>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#most-popular-products">Products</a></li><!--MOST POPULAR PRODUCTS HAS TO HAVE THIS ID-->
-                <img id="main-logo" src="https://picsum.photos/200" href="index.html" alt="Logo for the website">
-                <li><a href="index.html#most-popular-categories">Categories</a></li><!--SAME FOR THIS ID IN CATEGORIES-->
-                <li><a href="#">Contact us</a></li><!--LINK TO FOOTER AND CONTACT INFO THERE, ON CURRENT PAGE NOT FRONT-->
+                <li><a href="index.html#most-popular-products">Products</a></li>
             </ul>
-            <i class="fa-solid fa-cart-shopping"></i>
+            <p><a href="index.html"><!--PROBLY PUT THIS ABOVE THE UL SO IT CAN BE 1 LIST, AND PUT THIS IN MIDDLE WITH CSS-->
+                <img id="main-logo" src="https://picsum.photos/200" alt="Logo for the website">
+            </a></p>
+            <ul>
+                <li><a href="index.html#most-popular-categories">Categories</a></li>
+                <li><a href="#contact-us">Contact us</a></li>
+            </ul>
+            <a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a>
         </nav>
     </header>
+    <main>
+        <section id="banner">
+            <h2>Lorem ipsum</h2>
+            <p>Donec eleifend fringilla erat vitae fermentum. Phasellus elementum maximus urna et tristique.</p>
+            <a href="#"></a>
+        </section>
+
+        <section>
+            <a id="most-popular-products"></a>
+            <h2>Our most popular products</h2>
+            <p>Morbi fringilla felis purus, porttitor volutpat eros pharetra a.</p>
+            <button type="button">New Products</button>
+            <button type="button">Specials</button>
+            <button type="button">Best Selling</button>
+            
+            <article class="product-card">
+                <picture>
+                    <img src="https://picsum.photos/200" alt="Image of the product">
+                </picture>
+                <h3>Product Name</h3>
+                <p>5590,-</p>
+            </article>
+
+            <article class="product-card">
+                <picture>
+                    <img src="https://picsum.photos/200" alt="Image of the product">
+                </picture>
+                <h3>Product Name</h3>
+                <p>5590,-</p>
+            </article>
+
+            <article class="product-card">
+                <picture>
+                    <img src="https://picsum.photos/200" alt="Image of the product">
+                </picture>
+                <h3>Product Name</h3>
+                <p>5590,-</p>
+            </article>
+
+            <article class="product-card">
+                <picture>
+                    <img src="https://picsum.photos/200" alt="Image of the product">
+                </picture>
+                <h3>Product Name</h3>
+                <p>5590,-</p>
+            </article>
+
+            <article class="product-card">
+                <picture>
+                    <img src="https://picsum.photos/200" alt="Image of the product">
+                </picture>
+                <h3>Product Name</h3>
+                <p>5590,-</p>
+            </article>
+
+            <article class="product-card">
+                <picture>
+                    <img src="https://picsum.photos/200" alt="Image of the product">
+                </picture>
+                <h3>Product Name</h3>
+                <p>5590,-</p>
+            </article>
+        </section>
+
+        <section>
+            <a id="most-popular-categories"></a>
+            <h2>Our most popular categories</h2>
+            <p>Aliquam interdum tortor gravida, dapibus odio non, tristique neque.</p>
+
+            <article class="category-card">
+                <h3>Category 1</h3>
+                <picture>
+                    <img src="https://picsum.photos/400" alt="Image representing the category">
+                </picture>
+            </article>
+        </section>
+
+        <section>
+            <h2>Reviews</h2>
+
+            <article>
+                <picture> <!--MIGHT CHANGE THESE TO "FIGURE" AND "FIGCAPTION LATER IF THERE ARE NOT ANY IMAGES WHICH NEEDS TO BE CHANGED WITH SCREEN SIZE LIKE THOSE ABOVE"-->
+                    <img src="https://picsum.photos/200" alt="Image posted by the user that submitted the review">
+                </picture>
+                <h3>Donec sed interdum</h3>
+                <p>Ut volutpat luctus augue, sit amet convallis leo varius sit amet. Vivamus consequat, nulla id porta eleifend, ligula nisl pharetra odio, vel tempor sapien ipsum vitae elit.</p>
+            </article>
+
+            <article>
+                <picture> <!--MIGHT CHANGE THESE TO "FIGURE" AND "FIGCAPTION LATER IF THERE ARE NOT ANY IMAGES WHICH NEEDS TO BE CHANGED WITH SCREEN SIZE LIKE THOSE ABOVE"-->
+                    <img src="https://picsum.photos/200" alt="Image posted by the user that submitted the review">
+                </picture>
+                <h3>Donec sed interdum</h3>
+                <p>Ut volutpat luctus augue, sit amet convallis leo varius sit amet. Vivamus consequat, nulla id porta eleifend, ligula nisl pharetra odio, vel tempor sapien ipsum vitae elit.</p>
+            </article>
+
+            <article>
+                <picture> <!--MIGHT CHANGE THESE TO "FIGURE" AND "FIGCAPTION LATER IF THERE ARE NOT ANY IMAGES WHICH NEEDS TO BE CHANGED WITH SCREEN SIZE LIKE THOSE ABOVE"-->
+                    <img src="https://picsum.photos/200" alt="Image posted by the user that submitted the review">
+                </picture>
+                <h3>Donec sed interdum</h3>
+                <p>Ut volutpat luctus augue, sit amet convallis leo varius sit amet. Vivamus consequat, nulla id porta eleifend, ligula nisl pharetra odio, vel tempor sapien ipsum vitae elit.</p>
+            </article>
+
+            <article>
+                <picture> <!--MIGHT CHANGE THESE TO "FIGURE" AND "FIGCAPTION LATER IF THERE ARE NOT ANY IMAGES WHICH NEEDS TO BE CHANGED WITH SCREEN SIZE LIKE THOSE ABOVE"-->
+                    <img src="https://picsum.photos/200" alt="Image posted by the user that submitted the review">
+                </picture>
+                <h3>Donec sed interdum</h3>
+                <p>Ut volutpat luctus augue, sit amet convallis leo varius sit amet. Vivamus consequat, nulla id porta eleifend, ligula nisl pharetra odio, vel tempor sapien ipsum vitae elit.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <section>
+            <p><a href="index.html">
+                <img id="logo" src="https://picsum.photos/100" alt="Logo for the website">
+            </a></p>
+            <h5>Nulla nulla elit, molestie et sagittis ut, tempus et lacus.</h5>
+        </section>
+
+        <section>
+            <a id="contact-us"></a>
+            <h4>Contact info</h4>
+            <address>
+                Address: B R A Veien 4, 1757 Halden<br>
+                Phone Number: 69 60 80 00<br>
+                E-mail: postmottak@hiof.no<br>
+                Opening Hours: 8 AM to 3 PM
+            </address>
+        </section>
+
+        <section>
+            <h4>Shortcuts</h4>
+            <ul>
+                <li><a href="index.html#most-popular-products">Products</a></li><!--THIS SHOULD LINK TO THE PRODUCTS PAGE NOT TO THE MOST POPULAR ON THE FRONT PAGE-->
+                <li><a href="index.html#most-popular-categories">Categories</a></li>
+                <li><a href="#">Contact us</a></li><!--THIS WAS IN THE PICTURE ON GITHUB, MABYE ITS FOR LATER-->
+            </ul>
+        </section>
+
+        <section>
+            <h4>Social media</h4>
+            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.pinterest.com/"><i class="fa-brands fa-pinterest"></i></a>
+        </section>
+    </footer>
 </body>
 </html>
