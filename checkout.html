@@ -3,10 +3,178 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="Icons/fontawesome/css/fontawesome.css" rel="stylesheet">
+    <link href="Icons/fontawesome/css/brands.css" rel="stylesheet">
+    <link href="Icons/fontawesome/css/solid.css" rel="stylesheet">
     <link rel="stylesheet" href="CSS/style.css">
     <title>Checkout</title>
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <form>
+                <label for="search">Search</label>
+                <input type="search" placeholder="Search..." id="search">
+                <input type="submit" value="search">
+            </form>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#most-popular-products">Products</a></li>
+            </ul>
+            <p><a href="index.html"><!--PROBLY PUT THIS ABOVE THE UL SO IT CAN BE 1 LIST, AND PUT THIS IN MIDDLE WITH CSS-->
+                <img id="main-logo" src="https://picsum.photos/200" alt="Logo for the website">
+            </a></p>
+            <ul>
+                <li><a href="index.html#most-popular-categories">Categories</a></li>
+                <li><a href="#contact-us">Contact us</a></li>
+            </ul>
+            <a href="#"><i class="fa-solid fa-user"></i></a>
+            <a href="#"><i class="fa-solid fa-heart"></i></a>
+            <a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Checkout</h1>
+
+        <section>
+            <h2>1. Shopping Cart</h2>
+
+            <article>
+                <picture>
+                    <img src="https://picsum.photos/300" alt="Image of the product">
+                </picture>
+                <h3>Product Name</h3>
+                <p>Price: 1490,-</p>
+                <p>Color: Red</p>
+            </article>
+
+            <article>
+                <picture>
+                    <img src="https://picsum.photos/300" alt="Image of the product">
+                </picture>
+                <h3>Product Name</h3>
+                <p>Price: 1490,-</p>
+                <p>Color: Red</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>2. Personal Details</h2>
+
+            <form>
+                <h3>Adress for delivery:</h3>
+
+                <label for="first-name">First Name</label><br>
+                <input type="text" id="first-name" name="first-name" maxlength="30" placeholder="Your first name..." required><br>
+
+                <label for="last-name">Last Name</label><br>
+                <input type="text" id="last-name" name="last-name" maxlength="40" placeholder="Your last name..." required><br>
+
+                <label for="address">Address</label><br>
+                <input type="text" id="address" name="address" maxlength="50" placeholder="Your address..." required><br>
+
+                <label for="postal-code">Postal Code</label><br>
+                <input type="number" id="postal-code" name="postal-code" max="9999" placeholder="Your postal code..." required><br>
+
+                <label for="postal-area">Postal Area</label><br>
+                <input type="text" id="postal-area" name="postal-area" maxlength="40" placeholder="Your postal area..." required><br>
+
+                <label for="save-info">Save info</label><br>
+                <input type="submit" id="save-info" value="Save Info"><br>
+
+                <label for="cancel">Cancel</label><br>
+                <input type="reset" id="cancel" value="Cancel">
+            </form>
+        </section>
+
+        <section>
+            <h2>3. Delivery</h2>
+
+            <form>
+                <h3>Delivery Options:</h3>
+
+                <label for="express-home">Express home delivery</label><br>
+                <input type="radio" id="express-home" name="delivery-options"><br>
+
+                <label for="express-delivery-site">Express delivery site</label><br>
+                <input type="radio" id="express-delivery-site" name="delivery-options"><br>
+
+                <label for="standard-home">Standard home delivery</label><br>
+                <input type="radio" id="standard-home" name="delivery-options">
+            </form>
+        </section>
+
+        <section>
+            <h2>4. Payment</h2>
+
+            <form>
+                <h3>Card Details:</h3>
+
+                <label for="card-number">Card Number</label><br>
+                <input type="number" id="card-number" name="card-number" placeholder="1234 5678 9012 3456..." required><br>
+
+                <label for="expiration-date">Expiration date</label><br>
+                <input type="date" id="expiration-date" name="expiration-date" required><br>
+
+                <label for="cvc">CVC/CVV</label><br>
+                <input type="number" id="cvc" name="cvc" max="999" placeholder="CVC/CVV" required>
+            </form>
+
+            <p>Your total is: 3590,-</p>
+
+            <button type="button">Complete Purchase</button>
+
+            <p>Du bekrefter herved at opplysningene og dokumentene du har
+                oppgitt er korrekte og fullstendige. Leverandøren forbeholder seg
+                retten til å heve eller avslutte avtaleforholdet dersom det foreligger
+                uriktige eller ufullstendige opplysninger.</p>
+            
+            <form>
+                <label for="accept-conditions">Yes, I accept these conditions</label><br>
+                <input type="radio" id="accept-conditions" name="accept-conditions" required><br>
+
+                <label for="news-letter">Yes! Please send me your news letter</label><br>
+                <input type="radio" id="news-letter" name="news-letter">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <section>
+            <p><a href="index.html">
+                <img id="logo" src="https://picsum.photos/100" alt="Logo for the website">
+            </a></p>
+            <h5>Nulla nulla elit, molestie et sagittis ut, tempus et lacus.</h5>
+        </section>
+
+        <section>
+            <a id="contact-us"></a>
+            <h4>Contact info</h4>
+            <address>
+                <i class="fa-solid fa-location-dot"></i>Address: B R A Veien 4, 1757 Halden<br>
+                <i class="fa-solid fa-phone"></i>Phone Number: 69 60 80 00<br>
+                <i class="fa-solid fa-envelope"></i>E-mail: postmottak@hiof.no<br>
+                <i class="fa-solid fa-clock"></i>Opening Hours: 8 AM to 3 PM
+            </address>
+        </section>
+
+        <section>
+            <h4>Shortcuts</h4>
+            <ul>
+                <li><a href="product.html">Products</a></li><!--THIS SHOULD LINK TO THE PRODUCTS PAGE NOT TO THE MOST POPULAR ON THE FRONT PAGE-->
+                <li><a href="index.html#most-popular-categories">Categories</a></li>
+                <li><a href="#">Contact us</a></li><!--THIS WAS IN THE PICTURE ON GITHUB, MABYE ITS FOR LATER-->
+            </ul>
+        </section>
+
+        <section>
+            <h4>Social media</h4>
+            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.pinterest.com/"><i class="fa-brands fa-pinterest"></i></a>
+        </section>
+    </footer>
 </body>
 </html>

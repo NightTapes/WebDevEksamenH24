@@ -3,10 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="Icons/fontawesome/css/fontawesome.css" rel="stylesheet">
+    <link href="Icons/fontawesome/css/brands.css" rel="stylesheet">
+    <link href="Icons/fontawesome/css/solid.css" rel="stylesheet">
     <link rel="stylesheet" href="CSS/style.css">
     <title>Products</title>
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <form>
+                <label for="search">Search</label>
+                <input type="search" placeholder="Search..." id="search">
+                <input type="submit" value="search">
+            </form>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#most-popular-products">Products</a></li>
+            </ul>
+            <p><a href="index.html"><!--PROBLY PUT THIS ABOVE THE UL SO IT CAN BE 1 LIST, AND PUT THIS IN MIDDLE WITH CSS-->
+                <img id="main-logo" src="https://picsum.photos/200" alt="Logo for the website">
+            </a></p>
+            <ul>
+                <li><a href="index.html#most-popular-categories">Categories</a></li>
+                <li><a href="#contact-us">Contact us</a></li>
+            </ul>
+            <a href="#"><i class="fa-solid fa-user"></i></a>
+            <a href="#"><i class="fa-solid fa-heart"></i></a>
+            <a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a>
+        </nav>
+    </header>
+
+    <main>
+        <nav><!--BREADCRUMBS-->
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#most-popular-categories">Categories</a></li>
+                <li><a href="product.html">Products</a></li>
+            </ul>
+        </nav>
+
+        <section>
+            <h2>Product Images</h2><!--HIDE ALL H2 AND H3 WITH CSS IN THIS SECTION-->
+
+            <article>
+                <h3>The main product image</h3>
+                <picture>
+                    <img src="https://picsum.photos/300" alt="First product image">
+                </picture>
+            </article>
+
+            <article>
+                <h3>One of the smaller product images</h3>
+                <picture>
+                    <img src="https://picsum.photos/200" alt="Smaller product image">
+                </picture>
+            </article>
+
+            <article>
+                <h3>One of the smaller product images</h3>
+                <picture>
+                    <img src="https://picsum.photos/200" alt="Smaller product image">
+                </picture>
+            </article>
+
+            <article>
+                <h3>One of the smaller product images</h3>
+                <picture>
+                    <img src="https://picsum.photos/200" alt="Smaller product image">
+                </picture>
+            </article>
+        </section>
+
+        <section>
+            <h2>Product Name</h2>
+            <a href="#"><h3>Brand</h3></a>
+            <p>5590,-</p>
+            <p>Color: Red</p>
+        </section>
+
+        <aside>
+            <h3>Related Products</h3>
+
+            <article class="product-card">
+                <picture>
+                    <img src="https://picsum.photos/150" alt="Image of related product">
+                </picture>
+                <h4>Product Name</h4>
+                <p>1490,-</p>
+            </article>
+
+            <article class="product-card">
+                <picture>
+                    <img src="https://picsum.photos/150" alt="Image of related product">
+                </picture>
+                <h4>Product Name</h4>
+                <p>1490,-</p>
+            </article>
+
+            <article class="product-card">
+                <picture>
+                    <img src="https://picsum.photos/150" alt="Image of related product">
+                </picture>
+                <h4>Product Name</h4>
+                <p>1490,-</p>
+            </article>
+
+            <article class="product-card">
+                <picture>
+                    <img src="https://picsum.photos/150" alt="Image of related product">
+                </picture>
+                <h4>Product Name</h4>
+                <p>1490,-</p>
+            </article>
+        </aside>
+
+    </main>
+
+    <footer>
+        <section>
+            <p><a href="index.html">
+                <img id="logo" src="https://picsum.photos/100" alt="Logo for the website">
+            </a></p>
+            <h5>Nulla nulla elit, molestie et sagittis ut, tempus et lacus.</h5>
+        </section>
+
+        <section>
+            <a id="contact-us"></a>
+            <h4>Contact info</h4>
+            <address>
+                <i class="fa-solid fa-location-dot"></i>Address: B R A Veien 4, 1757 Halden<br>
+                <i class="fa-solid fa-phone"></i>Phone Number: 69 60 80 00<br>
+                <i class="fa-solid fa-envelope"></i>E-mail: postmottak@hiof.no<br>
+                <i class="fa-solid fa-clock"></i>Opening Hours: 8 AM to 3 PM
+            </address>
+        </section>
+
+        <section>
+            <h4>Shortcuts</h4>
+            <ul>
+                <li><a href="product.html">Products</a></li><!--THIS SHOULD LINK TO THE PRODUCTS PAGE NOT TO THE MOST POPULAR ON THE FRONT PAGE-->
+                <li><a href="index.html#most-popular-categories">Categories</a></li>
+                <li><a href="#">Contact us</a></li><!--THIS WAS IN THE PICTURE ON GITHUB, MABYE ITS FOR LATER-->
+            </ul>
+        </section>
+
+        <section>
+            <h4>Social media</h4>
+            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.pinterest.com/"><i class="fa-brands fa-pinterest"></i></a>
+        </section>
+    </footer>
 </body>
 </html>
