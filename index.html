@@ -11,20 +11,20 @@
 </head>
 <body>
     <header>
-        <nav>
+        <nav id="main-nav-menu">
             <form>
                 <label for="search">Search</label>
                 <input type="search" placeholder="Search..." id="search">
-                <input type="submit" value="search">
+                <button type="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
             </form>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="index.html#most-popular-products">Products</a></li>
-            </ul>
-            <p><a href="index.html"><!--PROBLY PUT THIS ABOVE THE UL SO IT CAN BE 1 LIST, AND PUT THIS IN MIDDLE WITH CSS-->
-                <img id="main-logo" src="https://picsum.photos/200" alt="Logo for the website">
-            </a></p>
-            <ul>
+
+                <a href="index.html"><h1>Logo</h1></a>
+
                 <li><a href="index.html#most-popular-categories">Categories</a></li>
                 <li><a href="#contact-us">Contact us</a></li>
             </ul>
@@ -37,7 +37,7 @@
         <section id="banner">
             <h2>Lorem ipsum</h2>
             <p>Donec eleifend fringilla erat vitae fermentum. Phasellus elementum maximus urna et tristique.</p>
-            <a href="#"></a>
+            <a href="#">Get a trial-package today</a>
         </section>
 
         <section>
@@ -147,15 +147,13 @@
         </section>
     </main>
 
-    <footer>
+    <footer class="footer">
         <section>
-            <p><a href="index.html">
-                <img id="logo" src="https://picsum.photos/100" alt="Logo for the website">
-            </a></p>
+            <a href="index.html"><h1>Logo</h1></a>
             <h5>Nulla nulla elit, molestie et sagittis ut, tempus et lacus.</h5>
         </section>
 
-        <section>
+        <section id="contact-info">
             <a id="contact-us"></a>
             <h4>Contact info</h4>
             <address>
@@ -166,7 +164,7 @@
             </address>
         </section>
 
-        <section>
+        <section id="shortcuts">
             <h4>Shortcuts</h4>
             <ul>
                 <li><a href="product.html">Products</a></li><!--THIS SHOULD LINK TO THE PRODUCTS PAGE NOT TO THE MOST POPULAR ON THE FRONT PAGE-->
@@ -175,7 +173,7 @@
             </ul>
         </section>
 
-        <section>
+        <section id="social-media">
             <h4>Social media</h4>
             <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
             <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>

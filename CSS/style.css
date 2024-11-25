@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{font-size: 2rem;}
+h2{font-size: 1.8rem;}
+h3{font-size: 1.6rem;}
+h4{font-size: 1.4rem;}
+p, a{font-size: 1rem;}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#main-nav-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+#main-nav-menu a {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#main-nav-menu form {
+    position: relative;
+}
+
+#main-nav-menu form input, button {
+    padding: 10px;
+    border-style: solid;
+    border-width: thin;
+    border-color: black;
+}
+
+#main-nav-menu form label {
+    visibility: hidden;
+    position: absolute;
+}
+
+.footer {
+    display: flex;
+}
+
+#shortcuts ul {
+    list-style: none;
+}
+
+/* For Mobile */
+@media only screen and (max-width: 800px) {
+    #main-nav-menu {
+        width: 100%;
+    }
+
+    #main-nav-menu ul {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    #main-nav-menu form {
+        width: 100%;
+    }
+
+    #main-nav-menu a {
+        width: 100%;
+    }
+
+    .footer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    #contact-info address i {
+        padding: 5px;
+        margin: 5px;
+    }
+
+    #shortcuts ul li {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 5px;
+        margin: 5px;
+
+    }
+
+    #social-media i {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+        padding: 5px;
+        margin: 5px;
+    }
+}
