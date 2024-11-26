@@ -10,149 +10,151 @@
     <title>Products</title>
 </head>
 <body>
-    <header>
-        <nav id="main-nav-menu">
-            <form>
-                <label for="search">Search</label>
-                <input type="search" placeholder="Search..." id="search">
-                <button type="submit">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
-            </form>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#most-popular-products">Products</a></li>
+    <div id="grid">
+        <header>
+            <nav id="main-nav-menu">
+                <form>
+                    <label for="search">Search</label>
+                    <input type="search" placeholder="Search..." id="search">
+                    <button type="submit">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#most-popular-products">Products</a></li>
 
+                    <li><a href="index.html"><h1>Logo</h1></a></li>
+
+                    <li><a href="index.html#most-popular-categories">Categories</a></li>
+                    <li><a href="#contact-us">Contact us</a></li>
+                </ul>
+                <a href="#"><i class="fa-solid fa-user"></i></a>
+                <a href="#"><i class="fa-solid fa-heart"></i></a>
+                <a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            </nav>
+        </header>
+
+        <main>
+            <nav id="breadcrumbs">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#most-popular-categories">Categories</a></li>
+                    <li><a href="product.html">Products</a></li>
+                </ul>
+            </nav>
+
+            <section id="product-area">
+                <h2>Product Images</h2><!--HIDE ALL H2 AND H3 WITH CSS IN THIS SECTION-->
+
+                <article class="product-area-sub">
+                    <h3>The main product image</h3>
+                    <picture>
+                        <img src="https://picsum.photos/300" alt="First product image">
+                    </picture>
+                </article>
+
+                <article class="product-area-sub">
+                    <h3>One of the smaller product images</h3>
+                    <picture>
+                        <img src="https://picsum.photos/200" alt="Smaller product image">
+                    </picture>
+                </article>
+
+                <article class="product-area-sub">
+                    <h3>One of the smaller product images</h3>
+                    <picture>
+                        <img src="https://picsum.photos/200" alt="Smaller product image">
+                    </picture>
+                </article>
+
+                <article class="product-area-sub">
+                    <h3>One of the smaller product images</h3>
+                    <picture>
+                        <img src="https://picsum.photos/200" alt="Smaller product image">
+                    </picture>
+                </article>
+            </section>
+
+            <section id="product-info">
+                <h2>Product Name</h2>
+                <a href="#"><h3>Brand</h3></a>
+                <p>5590,-</p>
+                <p>Color: Red</p>
+            </section>
+
+            <aside id="aside-product">
+                <h3>Related Products</h3>
+
+                <article class="aside-product-sub">
+                    <picture>
+                        <img src="https://picsum.photos/350" alt="Image of related product">
+                    </picture>
+                    <h4>Product Name</h4>
+                    <p>1490,-</p>
+                </article>
+
+                <article class="aside-product-sub">
+                    <picture>
+                        <img src="https://picsum.photos/350" alt="Image of related product">
+                    </picture>
+                    <h4>Product Name</h4>
+                    <p>1490,-</p>
+                </article>
+
+                <article class="aside-product-sub">
+                    <picture>
+                        <img src="https://picsum.photos/350" alt="Image of related product">
+                    </picture>
+                    <h4>Product Name</h4>
+                    <p>1490,-</p>
+                </article>
+
+                <article class="aside-product-sub">
+                    <picture>
+                        <img src="https://picsum.photos/350" alt="Image of related product">
+                    </picture>
+                    <h4>Product Name</h4>
+                    <p>1490,-</p>
+                </article>
+            </aside>
+
+        </main>
+
+        <footer class="footer">
+            <section>
                 <a href="index.html"><h1>Logo</h1></a>
+                <h5>Nulla nulla elit, molestie et sagittis ut, tempus et lacus.</h5>
+            </section>
 
-                <li><a href="index.html#most-popular-categories">Categories</a></li>
-                <li><a href="#contact-us">Contact us</a></li>
-            </ul>
-            <a href="#"><i class="fa-solid fa-user"></i></a>
-            <a href="#"><i class="fa-solid fa-heart"></i></a>
-            <a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a>
-        </nav>
-    </header>
+            <section id="contact-info">
+                <a id="contact-us"></a>
+                <h4>Contact info</h4>
+                <address>
+                    <i class="fa-solid fa-location-dot"></i>Address: B R A Veien 4, 1757 Halden<br>
+                    <i class="fa-solid fa-phone"></i>Phone Number: 69 60 80 00<br>
+                    <i class="fa-solid fa-envelope"></i>E-mail: postmottak@hiof.no<br>
+                    <i class="fa-solid fa-clock"></i>Opening Hours: 8 AM to 3 PM
+                </address>
+            </section>
 
-    <main>
-        <nav><!--BREADCRUMBS-->
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#most-popular-categories">Categories</a></li>
-                <li><a href="product.html">Products</a></li>
-            </ul>
-        </nav>
+            <section id="shortcuts">
+                <h4>Shortcuts</h4>
+                <ul>
+                    <li><a href="product.html">Products</a></li><!--THIS SHOULD LINK TO THE PRODUCTS PAGE NOT TO THE MOST POPULAR ON THE FRONT PAGE-->
+                    <li><a href="index.html#most-popular-categories">Categories</a></li>
+                    <li><a href="#">Contact us</a></li><!--THIS WAS IN THE PICTURE ON GITHUB, MABYE ITS FOR LATER-->
+                </ul>
+            </section>
 
-        <section>
-            <h2>Product Images</h2><!--HIDE ALL H2 AND H3 WITH CSS IN THIS SECTION-->
-
-            <article>
-                <h3>The main product image</h3>
-                <picture>
-                    <img src="https://picsum.photos/300" alt="First product image">
-                </picture>
-            </article>
-
-            <article>
-                <h3>One of the smaller product images</h3>
-                <picture>
-                    <img src="https://picsum.photos/200" alt="Smaller product image">
-                </picture>
-            </article>
-
-            <article>
-                <h3>One of the smaller product images</h3>
-                <picture>
-                    <img src="https://picsum.photos/200" alt="Smaller product image">
-                </picture>
-            </article>
-
-            <article>
-                <h3>One of the smaller product images</h3>
-                <picture>
-                    <img src="https://picsum.photos/200" alt="Smaller product image">
-                </picture>
-            </article>
-        </section>
-
-        <section>
-            <h2>Product Name</h2>
-            <a href="#"><h3>Brand</h3></a>
-            <p>5590,-</p>
-            <p>Color: Red</p>
-        </section>
-
-        <aside>
-            <h3>Related Products</h3>
-
-            <article class="product-card">
-                <picture>
-                    <img src="https://picsum.photos/150" alt="Image of related product">
-                </picture>
-                <h4>Product Name</h4>
-                <p>1490,-</p>
-            </article>
-
-            <article class="product-card">
-                <picture>
-                    <img src="https://picsum.photos/150" alt="Image of related product">
-                </picture>
-                <h4>Product Name</h4>
-                <p>1490,-</p>
-            </article>
-
-            <article class="product-card">
-                <picture>
-                    <img src="https://picsum.photos/150" alt="Image of related product">
-                </picture>
-                <h4>Product Name</h4>
-                <p>1490,-</p>
-            </article>
-
-            <article class="product-card">
-                <picture>
-                    <img src="https://picsum.photos/150" alt="Image of related product">
-                </picture>
-                <h4>Product Name</h4>
-                <p>1490,-</p>
-            </article>
-        </aside>
-
-    </main>
-
-    <footer class="footer">
-        <section>
-            <a href="index.html"><h1>Logo</h1></a>
-            <h5>Nulla nulla elit, molestie et sagittis ut, tempus et lacus.</h5>
-        </section>
-
-        <section id="contact-info">
-            <a id="contact-us"></a>
-            <h4>Contact info</h4>
-            <address>
-                <i class="fa-solid fa-location-dot"></i>Address: B R A Veien 4, 1757 Halden<br>
-                <i class="fa-solid fa-phone"></i>Phone Number: 69 60 80 00<br>
-                <i class="fa-solid fa-envelope"></i>E-mail: postmottak@hiof.no<br>
-                <i class="fa-solid fa-clock"></i>Opening Hours: 8 AM to 3 PM
-            </address>
-        </section>
-
-        <section id="shortcuts">
-            <h4>Shortcuts</h4>
-            <ul>
-                <li><a href="product.html">Products</a></li><!--THIS SHOULD LINK TO THE PRODUCTS PAGE NOT TO THE MOST POPULAR ON THE FRONT PAGE-->
-                <li><a href="index.html#most-popular-categories">Categories</a></li>
-                <li><a href="#">Contact us</a></li><!--THIS WAS IN THE PICTURE ON GITHUB, MABYE ITS FOR LATER-->
-            </ul>
-        </section>
-
-        <section id="social-media">
-            <h4>Social media</h4>
-            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://www.pinterest.com/"><i class="fa-brands fa-pinterest"></i></a>
-        </section>
-    </footer>
+            <section id="social-media">
+                <h4>Social media</h4>
+                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.pinterest.com/"><i class="fa-brands fa-pinterest"></i></a>
+            </section>
+        </footer>
+    </div>
 </body>
 </html>

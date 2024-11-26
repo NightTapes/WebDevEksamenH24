@@ -24,6 +24,10 @@ header nav ul {
     margin: 0;
 }
 
+#grid {
+    display: grid;
+}
+
 #main-nav-menu {
     display: flex;
     flex-wrap: wrap;
@@ -44,6 +48,7 @@ header nav ul {
     border-style: solid;
     border-width: thin;
     border-color: black;
+    background-color: white;
 }
 
 #main-nav-menu form label {
@@ -51,16 +56,140 @@ header nav ul {
     position: absolute;
 }
 
+#banner {
+    display: flex;
+    background-color: rgb(192, 191, 191);
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1rem;
+    padding: 25px;
+    margin: 15px;
+    text-align: right; /* To force the text, the ingress, to align properly to the right, which flex-end does not fully accomplish */
+}
+
+#banner a {
+    background-color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+}
+
+#filter-buttons {
+    display: flex;
+    width: 100%;
+    list-style: none;
+}
+
+#filter-buttons li {
+    border-style: solid;
+    border-width: thin;
+    border-color: black;
+    width: 100px;
+    padding: 0;
+    margin: 10px;
+}
+
+#filter-buttons li a {
+    display: block; /* To make the whole area inside the border clickable */
+    padding: 15px;
+}
+
+.category-card {
+    border-style: solid;
+    border-width: thin;
+    border-color: black;
+    display: flex;
+    width: auto; /*This needs to chagne when adding pictures*/
+    max-width: 350px;
+    height: 250px;
+    padding: 98.4px; /* This is the value shown in the inspector tool in the browser when looking at the area inside the padding in box model inside the Layout tab*/
+    margin: 10px;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    h3{font-size: medium;}
+}
+
+.review-card {
+    border-style: solid;
+    border-width: thin;
+    border-color: black;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 10px;
+    width: auto;
+    max-width: 350px;
+    align-items: flex-start;
+    h3{font-size: medium; font-weight: bold;}
+}
+
 .footer {
     display: flex;
+    border-top-style: solid;
+    border-width: thin;
 }
 
 #shortcuts ul {
     list-style: none;
 }
 
+/* Product page */
+
+#breadcrumbs ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding-left: 0%;
+}
+
+#breadcrumbs ul li {
+    display: inline;
+    padding: 10px;
+}
+
+#breadcrumbs ul li+li:before {
+    padding: 10px;
+    content: ">";
+}
+
+#product-area article picture img {
+    width: 100%;
+    max-width: 450px;
+}
+
+#product-area h2 {
+    display: none;
+}
+
+.product-area-sub h3 {
+    display: none;
+}
+
+#product-info {
+    display: flex;
+    flex-direction: column;
+}
+
+#product-info p {
+    padding: 5px;
+    margin: 0;
+}
+
+.aside-product-sub {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
 /* For Mobile */
 @media only screen and (max-width: 800px) {
+
+    #grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto, auto, auto, auto; /* Might not need this later since we built this mobile first */
+    }
+
     #main-nav-menu {
         width: 100%;
     }
@@ -80,6 +209,26 @@ header nav ul {
         width: 100%;
     }
 
+    #most-popular-products {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #filter-buttons {
+        padding-left: 0%;        
+        justify-content: space-around;  
+    }
+
+    .product-card {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #most-popular-categories {
+        display: flex;
+        flex-direction: column;
+    }
+
     .footer {
         flex-direction: column;
         justify-content: center;
@@ -90,6 +239,11 @@ header nav ul {
     #contact-info address i {
         padding: 5px;
         margin: 5px;
+    }
+
+    #shortcuts ul { /* Just to remove the padding on the left of the list, and move it closer to the border of the screens left-hand side, 
+        and make it align better with the other footer elements */
+        padding: 0px;
     }
 
     #shortcuts ul li {
@@ -108,5 +262,16 @@ header nav ul {
         width: 100%;
         padding: 5px;
         margin: 5px;
+    }
+
+    #aside-product {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .aside-product-sub {
+        width: 100%;
+        align-items: center;
     }
 }
