@@ -10,17 +10,17 @@
     <title>Front Page</title>
 </head>
 <body>
-    <div id="grid">
-        <header>
+    <div id="index-grid">
+        <header id="header">
             <nav id="main-nav-menu">
-                <form>
+                <form id="nav-form">
                     <label for="search">Search</label>
                     <input type="search" placeholder="Search..." id="search">
                     <button type="submit">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
                 </form>
-                <ul>
+                <ul id="nav-ul">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="index.html#most-popular-products">Products</a></li>
 
@@ -29,140 +29,144 @@
                     <li><a href="index.html#most-popular-categories">Categories</a></li>
                     <li><a href="#contact-us">Contact us</a></li>
                 </ul>
-                <a href="#"><i class="fa-solid fa-user"></i></a>
-                <a href="#"><i class="fa-solid fa-heart"></i></a>
-                <a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                <div id="nav-icons">
+                    <a href="#"><i class="fa-solid fa-user"></i></a>
+                    <a href="#"><i class="fa-solid fa-heart"></i></a>
+                    <a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
             </nav>
         </header>
         <main>
-            <section id="banner">
-                <h2>Lorem ipsum</h2>
-                <p>Donec eleifend fringilla erat vitae fermentum. Phasellus elementum maximus urna et tristique.</p>
-                <a href="product.html">Get a trial-package today</a>
-            </section>
+            <div id="index-main-grid">
+                <section id="banner">
+                    <h2>Lorem ipsum</h2>
+                    <p>Donec eleifend fringilla erat vitae fermentum. Phasellus elementum maximus urna et tristique.</p>
+                    <a href="product.html">Get a trial-package today</a>
+                </section>
 
-            <section id="most-popular-products">
-                <h2>Our most popular products</h2>
-                <p>Morbi fringilla felis purus, porttitor volutpat eros pharetra</p>
-                <ul id="filter-buttons">
-                    <li><a href="#">New Products</a></li>
-                    <li><a href="#">Special Prices</a></li>
-                    <li><a href="#">Best Selling</a></li>
-                </ul>
-                
-                <article class="product-card">
-                    <picture>
-                        <img src="https://picsum.photos/300" alt="Image of the product">
-                    </picture>
-                    <h3><a href="product.html">Product Name</a></h3>
-                    <p>5590,-</p>
-                </article>
+                <section id="most-popular-products">
+                    <h2>Our most popular products</h2>
+                    <p>Morbi fringilla felis purus, porttitor volutpat eros pharetra</p>
+                    <ul id="filter-buttons">
+                        <li><a href="#">New Products</a></li>
+                        <li><a href="#">Special Prices</a></li>
+                        <li><a href="#">Best Selling</a></li>
+                    </ul>
+                    
+                    <article class="product-card">
+                        <picture>
+                            <img src="https://picsum.photos/300" alt="Image of the product">
+                        </picture>
+                        <h3><a href="product.html">Product Name</a></h3>
+                        <p>5590,-</p>
+                    </article>
 
-                <article class="product-card">
-                    <picture>
-                        <img src="https://picsum.photos/300" alt="Image of the product">
-                    </picture>
-                    <h3><a href="product.html">Product Name</a></h3>
-                    <p>5590,-</p>
-                </article>
+                    <article class="product-card">
+                        <picture>
+                            <img src="https://picsum.photos/300" alt="Image of the product">
+                        </picture>
+                        <h3><a href="product.html">Product Name</a></h3>
+                        <p>5590,-</p>
+                    </article>
 
-                <article class="product-card">
-                    <picture>
-                        <img src="https://picsum.photos/300" alt="Image of the product">
-                    </picture>
-                    <h3><a href="product.html">Product Name</a></h3>
-                    <p>5590,-</p>
-                </article>
+                    <article class="product-card">
+                        <picture>
+                            <img src="https://picsum.photos/300" alt="Image of the product">
+                        </picture>
+                        <h3><a href="product.html">Product Name</a></h3>
+                        <p>5590,-</p>
+                    </article>
 
-                <article class="product-card">
-                    <picture>
-                        <img src="https://picsum.photos/300" alt="Image of the product">
-                    </picture>
-                    <h3><a href="product.html">Product Name</a></h3>
-                    <p>5590,-</p>
-                </article>
+                    <article class="product-card">
+                        <picture>
+                            <img src="https://picsum.photos/300" alt="Image of the product">
+                        </picture>
+                        <h3><a href="product.html">Product Name</a></h3>
+                        <p>5590,-</p>
+                    </article>
 
-                <article class="product-card">
-                    <picture>
-                        <img src="https://picsum.photos/300" alt="Image of the product">
-                    </picture>
-                    <h3><a href="product.html">Product Name</a></h3>
-                    <p>5590,-</p>
-                </article>
+                    <article class="product-card">
+                        <picture>
+                            <img src="https://picsum.photos/300" alt="Image of the product">
+                        </picture>
+                        <h3><a href="product.html">Product Name</a></h3>
+                        <p>5590,-</p>
+                    </article>
 
-                <article class="product-card">
-                    <picture>
-                        <img src="https://picsum.photos/300" alt="Image of the product">
-                    </picture>
-                    <h3><a href="product.html">Product Name</a></h3>
-                    <p>5590,-</p>
-                </article>
-            </section>
+                    <article class="product-card">
+                        <picture>
+                            <img src="https://picsum.photos/300" alt="Image of the product">
+                        </picture>
+                        <h3><a href="product.html">Product Name</a></h3>
+                        <p>5590,-</p>
+                    </article>
+                </section>
 
-            <section id="most-popular-categories">
-                <h2>Our most popular categories</h2>
-                <p>Aliquam interdum tortor gravida, dapibus odio non, tristique neque.</p>
+                <section id="most-popular-categories">
+                    <h2>Our most popular categories</h2>
+                    <p>Aliquam interdum tortor gravida, dapibus odio non, tristique neque.</p>
 
-                <article class="category-card"><!-- When adding picture tag later, add alt text: alt="Image representing the category" -->
-                    <h3>Category 1</h3>
-                </article>
+                    <article class="category-card"><!-- When adding picture tag later, add alt text: alt="Image representing the category" -->
+                        <h3>Category 1</h3>
+                    </article>
 
-                <article class="category-card">
-                    <h3>Category 2</h3>
-                </article>
+                    <article class="category-card">
+                        <h3>Category 2</h3>
+                    </article>
 
-                <article class="category-card">
-                    <h3>Category 3</h3>
-                </article>
+                    <article class="category-card">
+                        <h3>Category 3</h3>
+                    </article>
 
-                <article class="category-card">
-                    <h3>Category 4</h3>
-                </article>
+                    <article class="category-card">
+                        <h3>Category 4</h3>
+                    </article>
 
-                <article class="category-card">
-                    <h3>Category 5</h3>
-                </article>
-            </section>
+                    <article class="category-card">
+                        <h3>Category 5</h3>
+                    </article>
+                </section>
 
-            <section>
-                <h2>Reviews</h2>
+                <section>
+                    <h2>Reviews</h2>
 
-                <article class="review-card">
-                    <picture> <!--MIGHT CHANGE THESE TO "FIGURE" AND "FIGCAPTION LATER IF THERE ARE NOT ANY IMAGES WHICH NEEDS TO BE CHANGED WITH SCREEN SIZE LIKE THOSE ABOVE"-->
-                        <img src="https://picsum.photos/150" alt="Image posted by the user that submitted the review">
-                    </picture>
-                    <h3>Donec sed interdum</h3>
-                    <p>Ut volutpat luctus augue, sit amet convallis leo varius sit amet. Vivamus consequat, nulla id porta eleifend, ligula nisl pharetra odio, vel tempor sapien ipsum vitae elit.</p>
-                </article>
+                    <article class="review-card">
+                        <picture> <!--MIGHT CHANGE THESE TO "FIGURE" AND "FIGCAPTION LATER IF THERE ARE NOT ANY IMAGES WHICH NEEDS TO BE CHANGED WITH SCREEN SIZE LIKE THOSE ABOVE"-->
+                            <img src="https://picsum.photos/150" alt="Image posted by the user that submitted the review">
+                        </picture>
+                        <h3>Donec sed interdum</h3>
+                        <p>Ut volutpat luctus augue, sit amet convallis leo varius sit amet. Vivamus consequat, nulla id porta eleifend, ligula nisl pharetra odio, vel tempor sapien ipsum vitae elit.</p>
+                    </article>
 
-                <article class="review-card">
-                    <picture> <!--MIGHT CHANGE THESE TO "FIGURE" AND "FIGCAPTION LATER IF THERE ARE NOT ANY IMAGES WHICH NEEDS TO BE CHANGED WITH SCREEN SIZE LIKE THOSE ABOVE"-->
-                        <img src="https://picsum.photos/150" alt="Image posted by the user that submitted the review">
-                    </picture>
-                    <h3>Donec sed interdum</h3>
-                    <p>Ut volutpat luctus augue, sit amet convallis leo varius sit amet. Vivamus consequat, nulla id porta eleifend, ligula nisl pharetra odio, vel tempor sapien ipsum vitae elit.</p>
-                </article>
+                    <article class="review-card">
+                        <picture> <!--MIGHT CHANGE THESE TO "FIGURE" AND "FIGCAPTION LATER IF THERE ARE NOT ANY IMAGES WHICH NEEDS TO BE CHANGED WITH SCREEN SIZE LIKE THOSE ABOVE"-->
+                            <img src="https://picsum.photos/150" alt="Image posted by the user that submitted the review">
+                        </picture>
+                        <h3>Donec sed interdum</h3>
+                        <p>Ut volutpat luctus augue, sit amet convallis leo varius sit amet. Vivamus consequat, nulla id porta eleifend, ligula nisl pharetra odio, vel tempor sapien ipsum vitae elit.</p>
+                    </article>
 
-                <article class="review-card">
-                    <picture> <!--MIGHT CHANGE THESE TO "FIGURE" AND "FIGCAPTION LATER IF THERE ARE NOT ANY IMAGES WHICH NEEDS TO BE CHANGED WITH SCREEN SIZE LIKE THOSE ABOVE"-->
-                        <img src="https://picsum.photos/150" alt="Image posted by the user that submitted the review">
-                    </picture>
-                    <h3>Donec sed interdum</h3>
-                    <p>Ut volutpat luctus augue, sit amet convallis leo varius sit amet. Vivamus consequat, nulla id porta eleifend, ligula nisl pharetra odio, vel tempor sapien ipsum vitae elit.</p>
-                </article>
+                    <article class="review-card">
+                        <picture> <!--MIGHT CHANGE THESE TO "FIGURE" AND "FIGCAPTION LATER IF THERE ARE NOT ANY IMAGES WHICH NEEDS TO BE CHANGED WITH SCREEN SIZE LIKE THOSE ABOVE"-->
+                            <img src="https://picsum.photos/150" alt="Image posted by the user that submitted the review">
+                        </picture>
+                        <h3>Donec sed interdum</h3>
+                        <p>Ut volutpat luctus augue, sit amet convallis leo varius sit amet. Vivamus consequat, nulla id porta eleifend, ligula nisl pharetra odio, vel tempor sapien ipsum vitae elit.</p>
+                    </article>
 
-                <article class="review-card">
-                    <picture> <!--MIGHT CHANGE THESE TO "FIGURE" AND "FIGCAPTION LATER IF THERE ARE NOT ANY IMAGES WHICH NEEDS TO BE CHANGED WITH SCREEN SIZE LIKE THOSE ABOVE"-->
-                        <img src="https://picsum.photos/150" alt="Image posted by the user that submitted the review">
-                    </picture>
-                    <h3>Donec sed interdum</h3>
-                    <p>Ut volutpat luctus augue, sit amet convallis leo varius sit amet. Vivamus consequat, nulla id porta eleifend, ligula nisl pharetra odio, vel tempor sapien ipsum vitae elit.</p>
-                </article>
-            </section>
+                    <article class="review-card">
+                        <picture> <!--MIGHT CHANGE THESE TO "FIGURE" AND "FIGCAPTION LATER IF THERE ARE NOT ANY IMAGES WHICH NEEDS TO BE CHANGED WITH SCREEN SIZE LIKE THOSE ABOVE"-->
+                            <img src="https://picsum.photos/150" alt="Image posted by the user that submitted the review">
+                        </picture>
+                        <h3>Donec sed interdum</h3>
+                        <p>Ut volutpat luctus augue, sit amet convallis leo varius sit amet. Vivamus consequat, nulla id porta eleifend, ligula nisl pharetra odio, vel tempor sapien ipsum vitae elit.</p>
+                    </article>
+                </section>
+            </div>
         </main>
 
-        <footer class="footer">
-            <section>
+        <footer id="footer">
+            <section id="footer-logo">
                 <a href="index.html"><h1>Logo</h1></a>
                 <h5>Nulla nulla elit, molestie et sagittis ut, tempus et lacus.</h5>
             </section>

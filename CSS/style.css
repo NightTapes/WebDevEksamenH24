@@ -24,8 +24,19 @@ header nav ul {
     margin: 0;
 }
 
-#grid {
-    display: grid;
+#index-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#product-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#checkout-grid {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 #main-nav-menu {
@@ -34,7 +45,7 @@ header nav ul {
     gap: 1rem;
 }
 
-#main-nav-menu a {
+#nav-icons {
     display: flex;
     flex-wrap: wrap;
 }
@@ -124,7 +135,7 @@ header nav ul {
     h3{font-size: medium; font-weight: bold;}
 }
 
-.footer {
+#footer {
     display: flex;
     border-top-style: solid;
     border-width: thin;
@@ -226,16 +237,9 @@ header nav ul {
     margin: 5px;
 }
 
-.hidden-label { /* This is the part from ChatGPT */
+.hidden-label {
+    visibility: hidden;
     position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
 }
 
 #delivery {
@@ -272,7 +276,7 @@ header nav ul {
 
     #grid {
         grid-template-columns: 1fr;
-        grid-template-rows: auto, auto, auto, auto; /* Might not need this later since we built this mobile first */
+        grid-template-rows: auto; /* Might not need this later since we built this mobile first */
     }
 
     #main-nav-menu {
@@ -290,8 +294,13 @@ header nav ul {
         width: 100%;
     }
 
-    #main-nav-menu a {
+    #nav-icons {
+        flex-direction: column;
         width: 100%;
+    }
+
+    #nav-icons a {
+        padding: 5px;
     }
 
     #most-popular-products {
@@ -320,7 +329,7 @@ header nav ul {
         flex-direction: column;
     }
 
-    .footer {
+    #footer {
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
@@ -411,5 +420,127 @@ header nav ul {
     #payment-card-details label {
         padding: 0;
         margin: 0;
+    }
+}
+
+/* For Desktop */
+@media only screen and (min-width: 800px) {
+    #index-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto; /* For responsive scaling */
+        row-gap: 1rem;
+    }
+
+    /*Header*/
+    #header {
+        display: flex;
+        grid-row: 1;
+    }
+
+    #main-nav-menu {
+        align-items: center;
+        flex-grow: 1;
+    }
+
+    #nav-form { /*Search bar*/
+        display: block;
+        padding: 2rem;
+        align-items: flex-start;
+        flex-grow: 1;
+    }
+
+    #nav-ul { /*Logo and links*/
+        display: flex;
+        margin: 10px;
+        flex-grow: 2;
+    }
+
+    #nav-ul li {
+        flex-grow: 1;
+    }
+
+    #nav-ul h1 {
+        margin-top: 0;
+    }
+
+    #nav-ul a {
+        margin-top: 25px;
+    }
+
+    #nav-icons a { /*Icons*/
+        display: flex;
+        padding: 1rem;
+        display: inline;
+        align-items: flex-end;
+        flex-grow: 1;
+    }
+
+    #index-main-grid {
+        display: grid;
+        grid-template-rows: auto auto auto auto;
+    }
+
+    /*Footer*/
+    #footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+    }
+
+    #footer-logo {
+        grid-column-start: 1;
+        grid-column-end: 4; /* This way it takes up the whole area, like the text states it should, but Grid can still be used */
+        grid-row: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    #contact-info {
+        grid-column: 1;
+        grid-row: 2;
+        padding-left: 20px;
+        display: flex;
+        flex-grow: 1;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #contact-info address i {
+        padding: 10px;
+    }
+
+    #shortcuts {
+        grid-column: 2;
+        grid-row: 2;
+        display: flex;
+        flex-grow: 1;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #shortcuts ul {
+        padding-left: 0;
+    }
+
+    #shortcuts ul li {
+        padding: 10px;
+    }
+
+    #social-media {
+        grid-column: 3;
+        grid-row: 2;
+        display: flex;
+        flex-grow: 1;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #social-media a {
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
     }
 }
