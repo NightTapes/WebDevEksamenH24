@@ -105,22 +105,6 @@ header nav ul {
     padding: 15px;
 }
 
-.category-card {
-    border-style: solid;
-    border-width: thin;
-    border-color: black;
-    display: flex;
-    width: auto; /*This needs to chagne when adding pictures*/
-    max-width: 350px;
-    height: 250px;
-    padding: 98.4px; /* This is the value shown in the inspector tool in the browser when looking at the area inside the padding in box model inside the Layout tab*/
-    margin: 10px;
-    display: block;
-    text-align: center;
-    font-weight: bold;
-    h3{font-size: medium;}
-}
-
 .review-card {
     border-style: solid;
     border-width: thin;
@@ -171,10 +155,6 @@ header nav ul {
 
 #product-area h2 {
     display: none; /* Mabye change this since screen readers apparently cannot read this now */
-}
-
-.product-area-sub h3 {
-    display: none;
 }
 
 #product-info {
@@ -305,28 +285,41 @@ header nav ul {
 
     #most-popular-products {
         display: flex;
-        flex-direction: column;
-    }
-
-    #most-popular-products {
-        display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
+        flex-direction: row;
     }
 
     #filter-buttons {
         padding-left: 0%;        
-        justify-content: space-around;  
+        justify-content: space-around;
+        text-align: center;  
     }
 
     .product-card {
         display: flex;
         flex-direction: column;
+        padding: 15px;
         a{font-size: 1em;}
     }
 
     #most-popular-categories {
         display: flex;
         flex-direction: column;
+    }
+
+    .category-card {
+        border-style: solid;
+        border-width: thin;
+        border-color: black;
+        display: flex;
+        width: auto; /*This needs to chagne when adding pictures*/
+        max-width: 550px;
+        padding: 98.4px; /* This is the value shown in the inspector tool in the browser when looking at the area inside the padding in box model inside the Layout tab*/
+        margin: 10px;
+        display: block;
+        text-align: center;
+        font-weight: bold;
+        h3{font-size: medium;}
     }
 
     #footer {
@@ -421,6 +414,28 @@ header nav ul {
         padding: 0;
         margin: 0;
     }
+
+    #product-area-main-photo img {
+        max-width: 100%;
+        min-width: 175px;
+        height: auto;
+        h3{display: none;}
+    }
+
+    #product-area-sub-1 {
+        width: 160px;
+        h3{display: none;}
+    }
+
+    #product-area-sub-2 {
+        width: 160px;
+        h3{display: none;}
+    }
+
+    #product-area-sub-3 {
+        width: 160px;
+        h3{display: none;}
+    }
 }
 
 /* For Desktop */
@@ -436,6 +451,7 @@ header nav ul {
     #header {
         display: flex;
         grid-row: 1;
+        max-width: 1200px;
     }
 
     #main-nav-menu {
@@ -476,7 +492,13 @@ header nav ul {
         flex-grow: 1;
     }
 
-    #index-main-grid {
+    #banner {
+        display: flex;
+        flex-wrap: wrap;
+        flex-grow: 1;
+    }
+
+    #index-main-grid { /* Grouping the different sections into their own grid section, which also ajusts size based on the content inside it */
         display: grid;
         grid-template-rows: auto auto auto auto;
     }
@@ -542,5 +564,187 @@ header nav ul {
         padding: 10px;
         display: flex;
         flex-direction: row;
+    }
+
+    /*Most popular products*/
+    #most-popular-products {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #most-popular-products h2 {
+        text-align: center;
+        width: 100%;
+    }
+
+    #filter-buttons {
+        justify-content: center;
+    }
+
+    .product-card { /* Not setting a max size like in the text for the "D requirement", since im using flexbox to make them respond to screen size instead */
+        flex-wrap: wrap;
+        padding: 15px; /* I feel like this padding works better than setting a margin like in the D text */
+    }
+
+    /*Most Popular Categories*/
+    #category-grid {
+        display: grid;
+        grid-template-columns: 200px 200px 200px 200px 200px 200px; /* Made like this so i can place and form the images how I want to */
+        grid-template-rows: 100px 100px 100px 100px 100px 100px;
+    }
+
+    #most-popular-categories h2 {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+
+    #most-popular-categories p {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .category-card {
+        border-style: solid;
+        border-width: thin;
+        border-color: black;
+        text-align: center;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h3{font-size: medium; color: white;}
+    }
+
+    #category-card-1 {
+        grid-row: 1 / 4;
+        grid-column: 1 / 3;
+        background-image: url(https://picsum.photos/450);
+        /*Image by <a href="https://pixabay.com/users/antoniollerena-32424406/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7749831">Antonio Castellanos</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=7749831">Pixabay</a>*/
+        background-size: cover;
+    }
+
+    #category-card-2 {
+        grid-row: 1 / 4;
+        grid-column: 3 / 5;
+        background-image: url(https://picsum.photos/550);
+        background-size: cover;
+    }
+
+    #category-card-3 {
+        grid-row: 1 / 5;
+        grid-column: 5 / 7;
+        background-image: url(https://picsum.photos/650);
+        background-size: cover;
+    }
+
+    #category-card-4 {
+        grid-row: 4 / 7;
+        grid-column: 1 / 5;
+        background-image: url(https://picsum.photos/500);
+        background-size: cover;
+    }
+
+    #category-card-5 {
+        grid-row: 5 / 7;
+        grid-column: 5 / 7;
+        background-image: url(https://picsum.photos/400);
+        background-size: cover;
+    }
+
+    /*Reviews*/ /* Come back to this - the sideways scrolling menu. It works when whitespace normal is removed from .review card. but not when adding more review cards*/
+
+    #review-scroll-bar {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        overflow: auto;
+        white-space: nowrap;
+    }
+
+    .review-card {
+        margin-top: 75px;
+        padding: 10px;
+        width: 289px;
+        white-space: normal;
+    }
+
+    /*Product page*/
+    #product-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    #product-area-grid {
+        display: grid;
+        grid-template-columns: 700px 440px;
+        grid-template-rows: auto;
+    }
+
+    #product-area {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #product-area-main-photo img { /* These were originally in a class, but changing them to id's instead made working with them much simpler */
+        max-width: 100%;
+        min-width: 175px;
+        height: auto;
+    }
+
+    #product-area-main-photo {
+        h3{display: none;}
+    }
+
+    #product-area-sub-1 {
+        grid-row: 2;
+        grid-column: 1;
+        width: 160px;
+        flex-grow: 1;
+        h3{display: none;}
+    }
+
+    #product-area-sub-2 {
+        grid-row: 2;
+        grid-column: 1;
+        width: 160px;
+        flex-grow: 1;
+        h3{display: none;}
+    }
+
+    #product-area-sub-3 {
+        grid-row: 2;
+        grid-column: 1;
+        width: 160px;
+        flex-grow: 1;
+        h3{display: none;}
+    }
+
+    /*Related Products*/
+    #aside-product {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #aside-product h3 {
+        text-align: center;
+        width: 100%;
+    }
+
+    .aside-product-sub {
+        flex-wrap: wrap;
+        padding: 15px;
+        min-width: 0;
     }
 }
