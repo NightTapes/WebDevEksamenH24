@@ -445,6 +445,8 @@ header nav ul {
         grid-template-columns: 1fr;
         grid-template-rows: auto; /* For responsive scaling */
         row-gap: 1rem;
+        overflow-x: hidden;
+        max-width: 1200px !important;
     }
 
     /*Header*/
@@ -496,11 +498,13 @@ header nav ul {
         display: flex;
         flex-wrap: wrap;
         flex-grow: 1;
+        max-width: 1200px !important; /* All these !important attributes were needed to make the scrollbar work properly, or else everything else on the page overflows and stretches */
     }
 
     #index-main-grid { /* Grouping the different sections into their own grid section, which also ajusts size based on the content inside it */
         display: grid;
         grid-template-rows: auto auto auto auto;
+        max-width: 1200px !important;
     }
 
     /*Footer*/
@@ -508,6 +512,7 @@ header nav ul {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         align-items: center;
+        max-width: 1200px !important;
     }
 
     #footer-logo {
@@ -572,6 +577,7 @@ header nav ul {
         flex-wrap: wrap;
         flex-direction: row;
         justify-content: center;
+        max-width: 1200px !important;
     }
 
     #most-popular-products h2 {
@@ -589,6 +595,10 @@ header nav ul {
     }
 
     /*Most Popular Categories*/
+    #most-popular-categories {
+        max-width: 1200px !important;
+    }
+
     #category-grid {
         display: grid;
         grid-template-columns: 200px 200px 200px 200px 200px 200px; /* Made like this so i can place and form the images how I want to */
@@ -657,20 +667,25 @@ header nav ul {
         background-size: cover;
     }
 
-    /*Reviews*/ /* Come back to this - the sideways scrolling menu. It works when whitespace normal is removed from .review card. but not when adding more review cards*/
+    /*Reviews*/ 
+    #review-box {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        max-width: 1200px !important;
+    }
 
     #review-scroll-bar {
-        display: flex;
-        flex-wrap: nowrap;
-        flex-direction: row;
         overflow: auto;
         white-space: nowrap;
+        text-align: center;
     }
 
     .review-card {
+        display: inline-block;
         margin-top: 75px;
         padding: 10px;
-        width: 289px;
+        width: 289px !important;
         white-space: normal;
     }
 
