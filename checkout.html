@@ -60,14 +60,22 @@
                     <p>Price: 1490,-</p>
                     <p>Color: Red</p>
                 </article>
+
+                <article class="shopping-cart-sub">
+                    <picture>
+                        <img src="https://picsum.photos/400" alt="Image of the product">
+                    </picture>
+                    <h3><a href="product.html">Product Name</a></h3>
+                    <p>Price: 1490,-</p>
+                    <p>Color: Red</p>
+                </article>
             </section>
 
             <section id="personal-details">
                 <h2>2. Personal Details</h2>
 
+                <p>Address for delivery:</p>
                 <form>
-                    <h3>Adress for delivery:</h3>
-
                     <label for="first-name" class="hidden-label">First Name</label><br>
                     <input type="text" id="first-name" name="first-name" maxlength="30" placeholder="Your first name..." required><br>
 
@@ -93,21 +101,23 @@
 
             <section id="delivery">
                 <h2>3. Delivery</h2>
+                <p>Delivery Options:</p>
 
                 <form>
-                    <h3>Delivery Options:</h3>
-
                     <label for="express-home">Express home delivery<br>
                         <input type="radio" id="express-home" name="delivery-options"><br>
                     </label>
+                    <p id="express-home-p">1-3 Days Estimated Delivery Time</p>
 
                     <label for="express-delivery-site">Express delivery site<br>
                         <input type="radio" id="express-delivery-site" name="delivery-options"><br>
                     </label>
+                    <p id="express-delivery-site-p">1-2 Days Estimated Delivery Time</p>
 
                     <label for="standard-home">Standard home delivery<br>
                         <input type="radio" id="standard-home" name="delivery-options">
                     </label>
+                    <p id="standard-home-p">4-6 Days Estimated Delivery Time</p>
                 </form>
             </section>
 
