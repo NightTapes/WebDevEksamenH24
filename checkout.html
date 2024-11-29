@@ -124,24 +124,28 @@
             <section id="payment">
                 <h2>4. Payment</h2>
 
+                <p>Card Details:</p>
                 <form id="payment-card-details">
-                    <h3>Card Details:</h3>
+                    <label for="card-number" id="card-number-label">Card Number
+                        <input type="number" id="card-number" name="card-number" placeholder="1234 5678 9012 3456..." required>
+                    </label>
 
-                    <label for="card-number">Card Number</label><br>
-                    <input type="number" id="card-number" name="card-number" placeholder="1234 5678 9012 3456..." required><br>
+                    <label for="expiration-date" id="expiration-date-label">Expiration date
+                        <input type="date" id="expiration-date" name="expiration-date" required>
+                    </label>
 
-                    <label for="expiration-date">Expiration date</label><br>
-                    <input type="date" id="expiration-date" name="expiration-date" required><br>
-
-                    <label for="cvc">CVC/CVV</label><br>
-                    <input type="number" id="cvc" name="cvc" max="999" placeholder="CVC/CVV" required>
+                    <label for="cvc" id="cvc-label">CVC/CVV
+                        <input type="number" id="cvc" name="cvc" max="999" placeholder="CVC/CVV" required>
+                    </label>
                 </form>
 
-                <p>Your total is: 3590,-</p>
+                <p class="total-price-p">Your total is:</p>
+                <p class="total-price-p" id="total-price">3590,-</p>
 
-                <button type="button" form="payment-card-details">Complete Purchase</button>
+                <label for="purchase-button" id="purchase-button-label">Complete Purchase</label>
+                <input type="submit" id="purchase-button" value="Complete Purchase">
 
-                <p>Du bekrefter herved at opplysningene og dokumentene du har
+                <p id="consent-form">Du bekrefter herved at opplysningene og dokumentene du har
                     oppgitt er korrekte og fullstendige. Leverandøren forbeholder seg
                     retten til å heve eller avslutte avtaleforholdet dersom det foreligger
                     uriktige eller ufullstendige opplysninger.</p>
