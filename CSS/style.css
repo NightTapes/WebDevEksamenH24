@@ -105,20 +105,6 @@ header nav ul {
     padding: 15px;
 }
 
-.review-card {
-    border-style: solid;
-    border-width: thin;
-    border-color: black;
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    margin: 10px;
-    width: auto;
-    max-width: 350px;
-    align-items: flex-start;
-    h3{font-size: medium; font-weight: bold;}
-}
-
 #footer {
     display: flex;
     border-top-style: solid;
@@ -157,23 +143,6 @@ header nav ul {
     display: none; /* Mabye change this since screen readers apparently cannot read this now */
 }
 
-#product-info {
-    display: flex;
-    flex-direction: column;
-}
-
-#product-info p {
-    padding: 5px;
-    margin: 0;
-}
-
-.aside-product-sub {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    a{font-size: 1em;}
-}
-
 /* Checkout page */
 
 .hidden-label {
@@ -188,8 +157,18 @@ header nav ul {
     padding: 10px;
 }
 
+.number-of-product {
+    padding: 15px;
+    width: 100px;
+}
+
+/*Stars*/
+.checked {
+    color: orange;
+  }
+
 /* For Mobile */
-@media only screen and (max-width: 800px) {
+@media only screen and (min-width: 100px) and (max-width: 800px) {
 
     #grid {
         grid-template-columns: 1fr;
@@ -234,9 +213,20 @@ header nav ul {
 
     .product-card {
         display: flex;
-        flex-direction: column;
-        padding: 15px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: auto;
+        width: auto;
+        max-width: 100%;
+        padding: 10px;
         a{font-size: 1em;}
+        h3, p{width: 100%;}
+    }
+
+    .product-card picture img {
+        height: 250px;
+        width: 250px;
+        border-radius: 25px;
     }
 
     #most-popular-categories {
@@ -244,19 +234,130 @@ header nav ul {
         flex-direction: column;
     }
 
+    #category-grid {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+    }
+
     .category-card {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 100%;
+        height: auto;
+        margin: 5px;
+        display: block;
+        position: relative;
+        text-align: center;
+        color: white;
+        text-align: center;
+        font-weight: bold;
+        h3{font-size: medium; color: white;}
+    }
+
+    .category-card picture img {
+        border-radius: 40px;
+    }
+
+    .category-card-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: white;
+      }
+
+    #category-card-1 {
+        grid-row: 1;
+        grid-column: 1;
+        picture img {
+            position: relative;
+            left: 0;
+            top: 0;
+            width: 410px;
+            height: 450px;
+        }
+    }
+
+    #category-card-2 {
+        grid-row: 2;
+        grid-column: 1;
+        picture img {
+
+            left: 0;
+            top: 0;
+            width: 410px;
+            height: 450px;
+        }
+    }
+
+    #category-card-3 {
+        grid-row: 3;
+        grid-column: 1;
+        picture img {
+
+            left: 0;
+            top: 0;
+            width: 410px;
+            height: 450px;
+        }
+    }
+
+    #category-card-4 {
+        grid-row: 4;
+        grid-column: 1;
+        picture img {
+
+            left: 0;
+            top: 0;
+            width: 410px;
+            height: 450px;
+        }
+    }
+
+    #category-card-5 {
+        grid-row: 5;
+        grid-column: 1;
+        picture img {
+
+            left: 0;
+            top: 0;
+            width: 410px;
+            height: 450px;
+        }
+    }
+
+    #review-box {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        max-width: 800px !important;
+    }
+
+    #review-scroll-bar {
+        overflow: auto;
+        white-space: nowrap;
+        text-align: center;
+    }
+
+    .review-card {
         border-style: solid;
         border-width: thin;
         border-color: black;
         display: flex;
-        width: auto; /*This needs to chagne when adding pictures*/
-        max-width: 550px;
-        padding: 98.4px; /* This is the value shown in the inspector tool in the browser when looking at the area inside the padding in box model inside the Layout tab*/
+        flex-direction: column;
+        padding: 10px;
         margin: 10px;
-        display: block;
-        text-align: center;
-        font-weight: bold;
-        h3{font-size: medium;}
+        display: inline-block;
+        width: 289px !important;
+        white-space: normal;
+        align-items: flex-start;
+        h3{font-size: medium; font-weight: bold;}
+    }
+
+    .review-card picture img {
+        border-radius: 100px;
     }
 
     #footer {
@@ -294,15 +395,46 @@ header nav ul {
         margin: 5px;
     }
 
+    #product-info {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #product-info p {
+        padding: 5px;
+        margin: 0;
+    }
+
     #aside-product {
         display: flex;
-        flex-wrap: wrap;
         flex-direction: column;
+        overflow: hidden;
+        max-width: 1200px !important;
+        h3{width: 100%;}
+        a{align-items: flex-end;}
     }
 
     .aside-product-sub {
-        width: 100%;
-        align-items: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        display: inline-block;
+        width: 289px !important;
+        white-space: normal;
+        height: auto;
+        padding: 10px;
+        a{font-size: 1em;}
+        h4, p{width: 100%;}
+    }
+
+    #related-scroll-bar {
+        overflow: auto;
+        white-space: nowrap;
+        text-align: center;
+    }
+
+    .aside-product-sub picture img {
+        border-radius: 25px;
     }
 
     #shopping-cart {
@@ -364,6 +496,8 @@ header nav ul {
         border-top-style: solid;
         border-color: lightgray;
         border-width: 1px;
+        i{padding-left: 20px;}
+        a{padding-left: 40px; margin-top: 0;}
     }
 
     #personal-details {
@@ -406,6 +540,10 @@ header nav ul {
         width: 100%;
         flex-direction: column;
         align-items: flex-start;
+        padding-bottom: 10px;
+        border-bottom-style: solid;
+        border-color: lightgray;
+        border-width: 1px;
     }
     
     #payment-conditions label {
@@ -429,9 +567,19 @@ header nav ul {
         margin: 0;
     }
 
-    #purchase-button-label input {
+    #purchase-button-label {
+        visibility: hidden;
+        position: absolute;
+    }
+
+    #total-price {
+        font-size: 30px !important; 
+        font-weight: bold;
+    }
+
+    #purchase-button {
+        display: flex;
         padding: 15px;
-        width: 100%;
         background-color: rgb(54, 54, 54);
         color: white;
     }
@@ -440,6 +588,9 @@ header nav ul {
         max-width: 100%;
         min-width: 175px;
         height: auto;
+    }
+
+    #product-area-main-photo {
         h3{display: none;}
     }
 
@@ -457,10 +608,75 @@ header nav ul {
         width: 160px;
         h3{display: none;}
     }
+
+    #product-area-size {
+        summary{padding: 15px; 
+            width: 100%;
+            background-color: rgb(183, 183, 183);
+            border-style: solid;
+            border-color: lightgray;
+            border-width: 1px;
+        }
+    p{
+        background-color: rgb(183, 183, 183);
+        padding: 15px;
+        margin: 0;
+        border-top-style: solid;
+        border-color: black;
+        border-width: 1px;
+    }
+    }
+
+    #add-to-cart {
+        background-color: black;
+        color: white;
+        padding: 15px;
+        display: inline-block;
+        width: 325px;
+    }
+
+    #add-to-fav {
+        padding: 15px;
+        i{padding-top: 20px;}
+        background-color: rgb(183, 183, 183);
+        border-style: solid;
+        border-color: lightgray;
+        border-width: 1px;
+    }
+    
+    .shopping-cart-size {
+        summary{padding: 15px; 
+            width: 100%;
+            background-color: rgb(183, 183, 183);
+            border-style: solid;
+            border-color: lightgray;
+            border-width: 1px;
+        }
+    p{
+        background-color: rgb(183, 183, 183);
+        padding: 15px;
+        margin: 0;
+        border-top-style: solid;
+        border-color: black;
+        border-width: 1px;
+    }
+    }
+
+    .shopping-cart-trash {
+        padding-top: 15px;
+    }
+
+    #your-email {
+        margin-top: 50px !important;
+    }
+
+    .express-home-p-2 {
+        color: black !important;
+    }
 }
 
 /* For Desktop */
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1001px) {
     #index-grid {
         display: grid;
         grid-template-columns: 1fr;
@@ -598,6 +814,8 @@ header nav ul {
         flex-wrap: wrap;
         flex-direction: row;
         justify-content: center;
+        padding-top: 100px;
+        padding-bottom: 100px;
         max-width: 1200px !important;
     }
 
@@ -612,7 +830,15 @@ header nav ul {
 
     .product-card { /* Not setting a max size like in the text for the "D requirement", since im using flexbox to make them respond to screen size instead */
         flex-wrap: wrap;
-        padding: 15px; /* I feel like this padding works better than setting a margin like in the D text */
+        max-width: 100%;
+        height: auto;
+        padding: 50px; /* I feel like this padding works better than setting a margin like in the D text */
+    }
+
+    .product-card picture img {
+        height: 300px;
+        width: 300px;
+        border-radius: 25px;
     }
 
     /*Most Popular Categories*/
@@ -641,28 +867,22 @@ header nav ul {
     }
 
     .category-card {
-        border-style: solid;
-        border-width: thin;
-        border-color: black;
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 100%;
+        height: auto;
+        margin: 5px;
+        display: block;
+        position: relative;
+        text-align: center;
+        color: white;
         text-align: center;
         font-weight: bold;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         h3{font-size: medium; color: white;}
     }
 
-    #category-card-1 {
-        grid-row: 1 / 4;
-        grid-column: 1 / 3;
-        position: relative;
-        picture img {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 300px;
-        }
+    .category-card picture img {
+        border-radius: 40px;
     }
 
     .category-card-text {
@@ -674,12 +894,23 @@ header nav ul {
         color: white;
       }
 
+    #category-card-1 {
+        grid-row: 1 / 4;
+        grid-column: 1 / 3;
+        picture img {
+
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 300px;
+        }
+    }
+
     #category-card-2 {
         grid-row: 1 / 4;
         grid-column: 3 / 5;
-        position: relative;
         picture img {
-            position: absolute;
+
             left: 0;
             top: 0;
             width: 100%;
@@ -690,16 +921,37 @@ header nav ul {
     #category-card-3 {
         grid-row: 1 / 5;
         grid-column: 5 / 7;
+        picture img {
+
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 400px;
+        }
     }
 
     #category-card-4 {
         grid-row: 4 / 7;
         grid-column: 1 / 5;
+        picture img {
+
+            left: 0;
+            top: 0;
+            width: 800px;
+            height: 300px;
+        }
     }
 
     #category-card-5 {
         grid-row: 5 / 7;
         grid-column: 5 / 7;
+        picture img {
+
+            left: 0;
+            top: 0;
+            width: 400px;
+            height: 200px;
+        }
     }
 
     /*Reviews*/ 
@@ -722,6 +974,10 @@ header nav ul {
         padding: 10px;
         width: 289px !important;
         white-space: normal;
+    }
+
+    .review-card picture img {
+        border-radius: 100px;
     }
 
     /*Product page*/
@@ -782,23 +1038,93 @@ header nav ul {
         h3{display: none;}
     }
 
+    #product-info-area {
+        grid-row: 1;
+        grid-column: 2;
+    }
+
+    #product-info {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #product-info p {
+        padding: 5px;
+        margin: 0;
+    }
+
+    #product-area-size {
+        padding-bottom: 10px;
+        summary{padding: 15px; 
+                width: 100%;
+                background-color: rgb(183, 183, 183);
+                border-style: solid;
+                border-color: lightgray;
+                border-width: 1px;
+            }
+        p{
+            background-color: rgb(183, 183, 183);
+            padding: 15px;
+            margin: 0;
+            border-top-style: solid;
+            border-color: black;
+            border-width: 1px;
+        }
+    }
+
+    #add-to-cart {
+        background-color: black;
+        color: white;
+        padding: 15px;
+        display: inline-block;
+        width: 325px;
+    }
+
+    #add-to-fav {
+        padding: 15px;
+        background-color: rgb(183, 183, 183);
+        border-style: solid;
+        border-color: lightgray;
+        border-width: 1px;
+    }
+
     /*Related Products*/
     #aside-product {
         display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: center;
+        flex-direction: column;
+        overflow: hidden;
+        max-width: 1200px !important;
+        h3{width: 100%;}
+        a{align-items: flex-end;}
     }
 
     #aside-product h3 {
+        align-items: flex-start;
+        width: 70%;
+    }
+
+    #see-more-related-link {
+        align-items: flex-end;
+        padding-top: 40px;
+        width: 30%;
+    }
+
+    #related-scroll-bar {
+        overflow: auto;
+        white-space: nowrap;
         text-align: center;
-        width: 100%;
     }
 
     .aside-product-sub {
-        flex-wrap: wrap;
-        padding: 15px;
-        min-width: 0;
+        display: inline-block;
+        margin-top: 75px;
+        padding: 10px;
+        width: 289px !important;
+        white-space: normal;
+    }
+
+    .aside-product-sub picture img {
+        border-radius: 25px;
     }
 
     /*Delivery options*/
@@ -822,6 +1148,14 @@ header nav ul {
         grid-template-rows: auto auto auto;
         p{font-size: medium; padding-left: 100px; color: rgb(83, 83, 83);}
     }
+
+    .express-home-p-2 {
+        color: black !important;
+    }
+
+    .delivery-truck-icon {
+        grid-column: 2;
+    }
     
     #delivery form label {
         display: flex;
@@ -834,6 +1168,8 @@ header nav ul {
         border-top-style: solid;
         border-color: lightgray;
         border-width: 1px;
+        i{padding-left: 20px;}
+        a{padding-left: 40px; margin-top: 0;}
     }
 
     /*Shopping Cart*/
@@ -876,10 +1212,22 @@ header nav ul {
         font-size: large;
     }
 
-    #shopping-cart article picture img {
+    .shopping-cart-size {
+        summary{padding: 15px; 
+            width: 100%;
+            background-color: rgb(183, 183, 183);
+            border-style: solid;
+            border-color: lightgray;
+            border-width: 1px;
+        }
+    p{
+        background-color: rgb(183, 183, 183);
         padding: 15px;
-        width: 100%;
-        max-width: 450px;
+        margin: 0;
+        border-top-style: solid;
+        border-color: black;
+        border-width: 1px;
+    }
     }
 
     /*Personal Details*/
@@ -916,6 +1264,16 @@ header nav ul {
         padding: 15px;
         margin: 5px;
         width: 450px;
+    }
+
+    #your-email {
+        width: 910px !important;
+        margin-top: 100px !important;
+
+    }
+
+    #phone-number {
+        width: 910px !important;
     }
 
     /*Payment*/
@@ -1005,5 +1363,139 @@ header nav ul {
         width: 910px;
         background-color: rgb(54, 54, 54);
         color: white;
+    }
+
+    .shopping-cart-trash {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+
+/*For Categories grid images - Tablet version*/
+/*This size only has the category grid and the product card scaling in it. Since nothing else was supposed to be made for tablet*/
+@media only screen and (min-width: 801px) and (max-width: 1000px) {
+    #most-popular-categories {
+        max-width: 1100px !important;
+    }
+
+    #category-grid {
+        width: 810px;
+        display: grid;
+        grid-template-columns: 200px 200px 200px 200px;
+        grid-template-rows: 100px 100px 100px 100px;
+    }
+
+    #most-popular-categories h2 {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+
+    #most-popular-categories p {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .category-card {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 100%;
+        height: auto;
+        margin: 5px;
+        display: block;
+        position: relative;
+        text-align: center;
+        color: white;
+        text-align: center;
+        font-weight: bold;
+        h3{font-size: medium; color: white;}
+    }
+
+    .category-card picture img {
+        border-radius: 40px;
+    }
+
+    .category-card-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: white;
+    }
+
+    #category-card-1 {
+        grid-row: 1 / 2;
+        grid-column: 1;
+        picture img {
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 200px;
+        }
+    }
+   
+    #category-card-2 {
+        grid-row: 3 / 4;
+        grid-column: 1;
+        picture img {
+
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 200px;
+        }
+    }
+
+    #category-card-3 {
+        grid-row: 1;
+        grid-column: 2 / 5;
+        picture img {
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 200px;
+        }
+    }
+
+    #category-card-4 {
+        grid-row: 3 / 5;
+        grid-column: 2 / 3;
+        picture img {
+            left: 0;
+            top: 0;
+            width: 200px;
+            height: 200px;
+        }
+    }
+
+    #category-card-5 {
+        grid-row: 3 / 5;
+        grid-column: 3 / 5;
+        picture img {
+            left: 0;
+            top: 0;
+            width: 400px;
+            height: 200px;
+        }
+    }
+
+    /* When adding this there are now 3 levels of scaling of these product-cards. 1 size for the mobile version, 1 when exceeding 800 pixels i width, and 1 when exceeding 1200 pixels in width. */
+    /* This means these product-cards scale with the resizing of the browser-window */
+    .product-card {
+        flex-wrap: wrap;
+        max-width: 100%;
+        height: auto;
+        padding: 50px;
+    }
+
+    .product-card picture img {
+        height: 275px;
+        width: 275px;
+        border-radius: 25px;
     }
 }
